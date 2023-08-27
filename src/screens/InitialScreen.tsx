@@ -13,8 +13,17 @@ import {ApplicationScreenProps} from '../types/navigation';
 import {fonts, images, layout} from '../theme';
 import {Button} from '../components';
 
-const InitialScreen: React.FC<ApplicationScreenProps> = () => {
+const InitialScreen: React.FC<ApplicationScreenProps> = ({navigation}) => {
   const {t} = useTranslation(['auth']);
+
+  const navigate_to_signup = () => {
+    navigation.navigate('SignUp');
+  };
+
+  const navigate_to_signIn = () => {
+    navigation.navigate('SignIn');
+  };
+
   return (
     <ImageBackground source={images.intro} style={layout.fill}>
       <SafeAreaView style={layout.colSpaceBetween}>
@@ -25,8 +34,8 @@ const InitialScreen: React.FC<ApplicationScreenProps> = () => {
           </Text>
         </View>
         <View>
-          <Button title={t('get_started')} onPress={() => null} />
-          <Button title={t('or_login')} isLinear onPress={() => null} />
+          <Button title={t('get_started')} onPress={navigate_to_signIn} />
+          <Button title={t('or_login')} isLinear onPress={navigate_to_signup} />
         </View>
       </SafeAreaView>
     </ImageBackground>
