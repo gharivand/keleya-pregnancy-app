@@ -24,7 +24,7 @@ const initialValues: IValues = {
   terms: false,
 };
 
-const SignUp: React.FC<ApplicationScreenProps> = () => {
+const SignUp: React.FC<ApplicationScreenProps> = ({navigation}) => {
   const {t} = useTranslation(['auth']);
   const {updateUserData} = useContext(StoreContext);
 
@@ -37,7 +37,8 @@ const SignUp: React.FC<ApplicationScreenProps> = () => {
 
   const onSubmit = (values: IValues) => {
     if (updateUserData) {
-      updateUserData({firstname: values.email});
+      updateUserData({email: values.email});
+      navigation.navigate('NameScreen');
     }
   };
 

@@ -13,6 +13,7 @@ interface IProps {
   onChangeText: (str: string) => void;
   placeholder: string;
   isPassword?: boolean;
+  isCentralized?: boolean;
 }
 
 const Input: React.FC<IProps> = props => {
@@ -23,7 +24,7 @@ const Input: React.FC<IProps> = props => {
       <TextInput
         value={props.value}
         onChangeText={props.onChangeText}
-        style={styles.textInput}
+        style={[styles.textInput, props.isCentralized && styles.centerText]}
         placeholder={props.placeholder}
         placeholderTextColor={colors.WARM_GREY}
         secureTextEntry={props.isPassword && isSecure}
@@ -62,6 +63,9 @@ const styles = StyleSheet.create({
   visibilityIcon: {
     width: 20,
     height: 20,
+  },
+  centerText: {
+    textAlign: 'center',
   },
 });
 

@@ -1,8 +1,6 @@
 import React, {useContext, useState} from 'react';
 import {Image, SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import {useTranslation} from 'react-i18next';
-import {Formik} from 'formik';
-import * as Yup from 'yup';
 
 import {ApplicationScreenProps} from '../types/navigation';
 import {fonts, images, layout} from '../theme';

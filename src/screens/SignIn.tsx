@@ -20,7 +20,7 @@ const initialValues: IValues = {
   password: '',
 };
 
-const SignIn: React.FC<ApplicationScreenProps> = () => {
+const SignIn: React.FC<ApplicationScreenProps> = ({navigation}) => {
   const {t} = useTranslation(['auth']);
   const {updateUserData} = useContext(StoreContext);
 
@@ -31,7 +31,8 @@ const SignIn: React.FC<ApplicationScreenProps> = () => {
 
   const onSubmit = (values: IValues) => {
     if (updateUserData) {
-      updateUserData({firstname: values.email});
+      updateUserData({email: values.email});
+      navigation.navigate('NameScreen');
     }
   };
 
