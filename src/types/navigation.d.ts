@@ -4,6 +4,7 @@ export type ApplicationStackParamList = {
   InitialScreen: undefined;
   SignUp: undefined;
   SignIn: undefined;
+  NameScreen: undefined;
 };
 
 export type ApplicationScreenProps =
