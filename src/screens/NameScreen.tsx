@@ -36,7 +36,7 @@ const NameScreen: React.FC<ApplicationScreenProps> = () => {
           />
         </View>
         <Button
-          title={t('login')}
+          title={t('continue')}
           onPress={onSubmit}
           disabled={firstname.length < 2}
         />
