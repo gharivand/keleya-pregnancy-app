@@ -4,3 +4,4 @@ export {default as SignIn} from './SignIn';
 export {default as NameScreen} from './NameScreen';
 export {default as DateScreen} from './DateScreen';
 export {default as WorkoutScreen} from './WorkoutScreen';
+export {default as SuccessScreen} from './SuccessScreen';

@@ -7,6 +7,7 @@ export type ApplicationStackParamList = {
   NameScreen: undefined;
   DateScreen: undefined;
   WorkoutScreen: undefined;
+  SuccessScreen: undefined;
 };
 
 export type ApplicationScreenProps =

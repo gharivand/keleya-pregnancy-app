@@ -7,6 +7,8 @@ const Images = {
   couch_smile: require('../assets/images/couch_smile.jpg'),
   due_date: require('../assets/images/due-date-background-image.jpg'),
   workout_goal: require('../assets/images/workout-goal-background-image.jpg'),
+  notifications: require('../assets/images/notifications-background-image.jpg'),
+  bell: require('../assets/images/bell.png'),
 };
 
 export default Images;
