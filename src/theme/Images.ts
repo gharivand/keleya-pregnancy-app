@@ -9,6 +9,7 @@ const Images = {
   workout_goal: require('../assets/images/workout-goal-background-image.jpg'),
   notifications: require('../assets/images/notifications-background-image.jpg'),
   bell: require('../assets/images/bell.png'),
+  back: require('../assets/images/back.png'),
 };
 
 export default Images;

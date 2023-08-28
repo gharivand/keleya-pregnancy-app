@@ -4,7 +4,7 @@ import {useTranslation} from 'react-i18next';
 
 import {ApplicationScreenProps} from '../types/navigation';
 import {fonts, images, layout} from '../theme';
-import {Button} from '../components';
+import {Button, Header} from '../components';
 import Input from '../components/Input';
 import {StoreContext} from '../context/Store';
 
@@ -26,6 +26,7 @@ const NameScreen: React.FC<ApplicationScreenProps> = ({navigation}) => {
   return (
     <View style={layout.fill}>
       <Image source={images.couch_smile} style={styles.headerImage} />
+      <Header />
       <SafeAreaView style={layout.colSpaceBetween}>
         <View style={styles.inputContainer}>
           <Text style={styles.title}>{t('its_great_that_you_are_here')}</Text>

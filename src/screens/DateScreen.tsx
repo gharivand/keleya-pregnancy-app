@@ -4,7 +4,7 @@ import {useTranslation} from 'react-i18next';
 
 import {ApplicationScreenProps} from '../types/navigation';
 import {fonts, images, layout} from '../theme';
-import {Button, DatePickerCustom} from '../components';
+import {Button, DatePickerCustom, Header} from '../components';
 import {StoreContext} from '../context/Store';
 
 const DateScreen: React.FC<ApplicationScreenProps> = ({navigation}) => {
@@ -22,6 +22,7 @@ const DateScreen: React.FC<ApplicationScreenProps> = ({navigation}) => {
   return (
     <View style={layout.fill}>
       <Image source={images.due_date} style={styles.headerImage} />
+      <Header />
       <SafeAreaView style={layout.colSpaceBetween}>
         <View style={styles.inputContainer}>
           <Text style={styles.title}>

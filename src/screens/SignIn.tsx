@@ -6,7 +6,7 @@ import * as Yup from 'yup';
 
 import {ApplicationScreenProps} from '../types/navigation';
 import {fonts, images, layout} from '../theme';
-import {Button} from '../components';
+import {Button, Header} from '../components';
 import Input from '../components/Input';
 import {StoreContext} from '../context/Store';
 
@@ -42,6 +42,7 @@ const SignIn: React.FC<ApplicationScreenProps> = ({navigation}) => {
   return (
     <View style={layout.fill}>
       <Image source={images.authentication} style={styles.headerImage} />
+      <Header />
       <SafeAreaView style={layout.fill}>
         <Formik
           initialValues={initialValues}

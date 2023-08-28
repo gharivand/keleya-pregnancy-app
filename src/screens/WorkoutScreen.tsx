@@ -5,7 +5,7 @@ import {Picker} from '@react-native-picker/picker';
 
 import {ApplicationScreenProps} from '../types/navigation';
 import {fonts, images, layout} from '../theme';
-import {Button} from '../components';
+import {Button, Header} from '../components';
 import {StoreContext} from '../context/Store';
 
 const WorkoutScreen: React.FC<ApplicationScreenProps> = ({navigation}) => {
@@ -39,6 +39,7 @@ const WorkoutScreen: React.FC<ApplicationScreenProps> = ({navigation}) => {
   return (
     <View style={layout.fill}>
       <Image source={images.workout_goal} style={styles.headerImage} />
+      <Header />
       <View style={styles.titleContainer}>
         <SafeAreaView>
           <Text style={styles.title}>{t('how_many_times_a_week')}</Text>
@@ -64,7 +65,6 @@ const styles = StyleSheet.create({
   headerImage: {
     width: '100%',
     height: '50%',
-    zIndex: 0,
   },
   titleContainer: {
     flex: 1,
