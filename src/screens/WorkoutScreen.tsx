@@ -29,7 +29,10 @@ const WorkoutScreen: React.FC<ApplicationScreenProps> = ({navigation}) => {
   const onSubmit = () => {
     if (updateUserData) {
       updateUserData({time_of_week: selectedTime});
-      navigation.navigate('SuccessScreen');
+      navigation.reset({
+        index: 0,
+        routes: [{name: 'SuccessScreen'}],
+      });
     }
   };
 

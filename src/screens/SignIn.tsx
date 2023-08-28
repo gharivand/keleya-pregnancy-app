@@ -32,7 +32,10 @@ const SignIn: React.FC<ApplicationScreenProps> = ({navigation}) => {
   const onSubmit = (values: IValues) => {
     if (updateUserData) {
       updateUserData({email: values.email});
-      navigation.navigate('SuccessScreen');
+      navigation.reset({
+        index: 0,
+        routes: [{name: 'SuccessScreen'}],
+      });
     }
   };
 
