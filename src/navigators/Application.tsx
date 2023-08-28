@@ -7,6 +7,7 @@ import {
   SignIn,
   NameScreen,
   DateScreen,
+  WorkoutScreen,
 } from '../screens';
 import {ApplicationStackParamList} from '../types/navigation';
 
@@ -21,6 +22,7 @@ const ApplicationNavigator = () => {
         <Stack.Screen name="SignIn" component={SignIn} />
         <Stack.Screen name="NameScreen" component={NameScreen} />
         <Stack.Screen name="DateScreen" component={DateScreen} />
+        <Stack.Screen name="WorkoutScreen" component={WorkoutScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

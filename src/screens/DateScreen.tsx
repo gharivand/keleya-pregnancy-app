@@ -7,7 +7,7 @@ import {fonts, images, layout} from '../theme';
 import {Button, DatePickerCustom} from '../components';
 import {StoreContext} from '../context/Store';
 
-const DateScreen: React.FC<ApplicationScreenProps> = () => {
+const DateScreen: React.FC<ApplicationScreenProps> = ({navigation}) => {
   const {t} = useTranslation(['auth']);
   const {userData, updateUserData} = useContext(StoreContext);
   const [date, setDate] = useState<Date | null>(null);
@@ -15,6 +15,7 @@ const DateScreen: React.FC<ApplicationScreenProps> = () => {
   const onSubmit = () => {
     if (updateUserData && date) {
       updateUserData({date});
+      navigation.navigate('WorkoutScreen');
     }
   };
 

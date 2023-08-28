@@ -6,6 +6,7 @@ const Images = {
   in_visible_icon: require('../assets/images/in-visible.png'),
   couch_smile: require('../assets/images/couch_smile.jpg'),
   due_date: require('../assets/images/due-date-background-image.jpg'),
+  workout_goal: require('../assets/images/workout-goal-background-image.jpg'),
 };
 
 export default Images;
