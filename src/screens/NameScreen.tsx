@@ -8,7 +8,7 @@ import {Button} from '../components';
 import Input from '../components/Input';
 import {StoreContext} from '../context/Store';
 
-const NameScreen: React.FC<ApplicationScreenProps> = () => {
+const NameScreen: React.FC<ApplicationScreenProps> = ({navigation}) => {
   const {t} = useTranslation(['auth']);
   const {updateUserData} = useContext(StoreContext);
   const [firstname, setFirstname] = useState('');
@@ -19,6 +19,7 @@ const NameScreen: React.FC<ApplicationScreenProps> = () => {
   const onSubmit = () => {
     if (updateUserData) {
       updateUserData({firstname});
+      navigation.navigate('DateScreen');
     }
   };
 

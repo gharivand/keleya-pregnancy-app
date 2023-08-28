@@ -3,7 +3,7 @@ import React from 'react';
 export interface IUser {
   email?: string;
   firstname?: string;
-  date?: string;
+  date?: Date;
   time_of_week?: string;
 }
 
