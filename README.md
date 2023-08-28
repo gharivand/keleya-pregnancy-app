@@ -1,79 +1,56 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Keleya Pregnancy App
 
-# Getting Started
+This is a React Native project aimed at providing a mini onboarding flow for the app.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Table of Contents
 
-## Step 1: Start the Metro Server
+- [Getting Started](#getting-started)
+   - [Prerequisites](#prerequisites)
+   - [Installation](#installation)
+   - [Running the App](#running-the-app)
+- [Mini Onboarding Flow](#mini-onboarding-flow)
+- [Thoughts on the Task](#thoughts-on-the-task)
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Getting Started
 
-To start Metro, run the following command from the _root_ of your React Native project:
+### Prerequisites
 
-```bash
-# using npm
-npm start
+List any prerequisites that need to be installed before setting up the project. This could include software, tools, or dependencies.
 
-# OR using Yarn
-yarn start
-```
+- [Node.js](https://nodejs.org/)
+- [yarn](https://yarnpkg.com/)
+- [React Native CLI](https://reactnative.dev/docs/environment-setup)
 
-## Step 2: Start your Application
+### Installation
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+Provide instructions for setting up the project on a local machine.
 
-### For Android
+1. Clone this repository: `git clone https://github.com/gharivand/keleya-pregnancy-app`
+2. Navigate to the project directory: `cd keleya-pregnancy-app`
+3. Install dependencies: `yarn install`
 
-```bash
-# using npm
-npm run android
+### Running the App
 
-# OR using Yarn
-yarn android
-```
+Explain how to run the React Native app locally.
 
-### For iOS
+1. For iOS:
+   - Run `yarn ios`
 
-```bash
-# using npm
-npm run ios
+2. For Android:
+   - Connect an Android device or start an emulator
+   - Run `yarn android`
 
-# OR using Yarn
-yarn ios
-```
+## Mini Onboarding Flow
+1. **Initial Screen**: The user have to choose login or sign up.
+2. **SignIn Screen**: User must be entered the email and password to login.
+3. **SignUp Screen**: User must be entered the email and password and accept terms and privacy to continue.
+4. **Name Screen**: The user have to enter her name.
+5. **Date Screen**: She has to enter the due date.
+6. **Workout Screen**: She has to choose time of workout in a week.
+7. **Success Screen**: Finally show this page after login or complete signup process.
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## Thoughts on the Task
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+I've employed the Context API for data management and Formik with Yup for form validation. The app is thoroughly tested on iOS and Android platforms and automatically adapts to users' language settings. Once I receive design specifics, I'll create a visually pleasing UI.
 
-## Step 3: Modifying your App
 
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
