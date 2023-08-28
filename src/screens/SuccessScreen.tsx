@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Image,
   ImageBackground,
+  Platform,
   SafeAreaView,
   StyleSheet,
   Text,
@@ -35,6 +36,7 @@ const SuccessScreen: React.FC<ApplicationScreenProps> = () => {
 const styles = StyleSheet.create({
   elementWrapper: {
     gap: 18,
+    marginVertical: Platform.select({android: 24}),
   },
   logo: {
     width: 50,

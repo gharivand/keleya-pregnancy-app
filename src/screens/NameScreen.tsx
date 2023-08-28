@@ -1,5 +1,12 @@
 import React, {useContext, useState} from 'react';
-import {Image, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {
+  Image,
+  Platform,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import {useTranslation} from 'react-i18next';
 
 import {ApplicationScreenProps} from '../types/navigation';
@@ -41,6 +48,7 @@ const NameScreen: React.FC<ApplicationScreenProps> = ({navigation}) => {
           title={t('continue')}
           onPress={onSubmit}
           disabled={firstname.length < 2}
+          style={styles.continueButton}
         />
       </SafeAreaView>
     </View>
@@ -59,6 +67,9 @@ const styles = StyleSheet.create({
     ...fonts.textRegular,
     textAlign: 'center',
     marginTop: 8,
+  },
+  continueButton: {
+    marginBottom: Platform.select({android: 24}),
   },
 });
 

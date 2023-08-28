@@ -1,10 +1,17 @@
 import React, {useContext, useEffect, useState} from 'react';
-import {Image, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {
+  Image,
+  Platform,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import {useTranslation} from 'react-i18next';
 import {Picker} from '@react-native-picker/picker';
 
 import {ApplicationScreenProps} from '../types/navigation';
-import {fonts, images, layout} from '../theme';
+import {colors, fonts, images, layout} from '../theme';
 import {Button, Header} from '../components';
 import {StoreContext} from '../context/Store';
 
@@ -48,6 +55,7 @@ const WorkoutScreen: React.FC<ApplicationScreenProps> = ({navigation}) => {
       <SafeAreaView style={layout.colSpaceBetween}>
         <View style={styles.pickerContainer}>
           <Picker
+            style={styles.picker}
             selectedValue={selectedTime}
             onValueChange={itemValue => setSelectedTime(itemValue)}>
             {items.map(item => (
@@ -55,7 +63,11 @@ const WorkoutScreen: React.FC<ApplicationScreenProps> = ({navigation}) => {
             ))}
           </Picker>
         </View>
-        <Button title={t('continue')} onPress={onSubmit} />
+        <Button
+          title={t('continue')}
+          onPress={onSubmit}
+          style={styles.continueButton}
+        />
       </SafeAreaView>
     </View>
   );
@@ -77,10 +89,22 @@ const styles = StyleSheet.create({
   pickerContainer: {
     flex: 1,
     justifyContent: 'center',
+    marginHorizontal: 40,
+  },
+  picker: {
+    ...Platform.select({
+      android: {
+        backgroundColor: colors.LIGHT_GRAY,
+        color: colors.GREYISH_BROWN,
+      },
+    }),
   },
   title: {
     ...fonts.textRegular,
     textAlign: 'center',
+  },
+  continueButton: {
+    marginBottom: Platform.select({android: 24}),
   },
 });
 

@@ -26,6 +26,7 @@ const Button: React.FC<IProps> = props => {
         styles.container,
         props.disabled && styles.disabled,
         props.isLinear && styles.linear,
+        props.style,
       ]}>
       <Text
         style={[

@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   Image,
+  Platform,
   SafeAreaView,
   StyleSheet,
   TouchableOpacity,
@@ -32,8 +33,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     position: 'absolute',
+    zIndex: 2,
   },
   backButton: {
+    marginTop: Platform.select({android: 12}),
     marginHorizontal: 20,
     padding: 8,
   },

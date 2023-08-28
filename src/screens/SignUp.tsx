@@ -1,5 +1,12 @@
 import React, {useContext} from 'react';
-import {Image, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {
+  Image,
+  Platform,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import {useTranslation} from 'react-i18next';
 import {Formik} from 'formik';
 import * as Yup from 'yup';
@@ -88,6 +95,7 @@ const SignUp: React.FC<ApplicationScreenProps> = ({navigation}) => {
                 title={t('create_account')}
                 onPress={handleSubmit}
                 disabled={!(isValid && dirty)}
+                style={styles.submitButton}
               />
             </View>
           )}
@@ -109,6 +117,9 @@ const styles = StyleSheet.create({
     ...fonts.textRegular,
     textAlign: 'center',
     marginTop: 8,
+  },
+  submitButton: {
+    marginBottom: Platform.select({android: 24}),
   },
 });
 

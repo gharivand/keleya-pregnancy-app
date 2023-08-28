@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Text,
   View,
+  Platform,
 } from 'react-native';
 import {useTranslation} from 'react-i18next';
 
@@ -33,7 +34,7 @@ const InitialScreen: React.FC<ApplicationScreenProps> = ({navigation}) => {
             {t('for_a_fit_and_relaxed_pregnancy')}
           </Text>
         </View>
-        <View>
+        <View style={styles.buttonsWrapper}>
           <Button title={t('get_started')} onPress={navigate_to_signIn} />
           <Button title={t('or_login')} isLinear onPress={navigate_to_signup} />
         </View>
@@ -47,13 +48,17 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     resizeMode: 'contain',
-    marginTop: 24,
+    marginTop: Platform.select({ios: 24, android: 48}),
     alignSelf: 'center',
   },
   title: {
     ...fonts.textRegular,
     textAlign: 'center',
     marginTop: 8,
+  },
+  buttonsWrapper: {
+    marginBottom: 20,
+    gap: 8,
   },
 });
 

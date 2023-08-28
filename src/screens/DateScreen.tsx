@@ -1,5 +1,12 @@
 import React, {useContext, useState} from 'react';
-import {Image, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {
+  Image,
+  Platform,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import {useTranslation} from 'react-i18next';
 
 import {ApplicationScreenProps} from '../types/navigation';
@@ -30,7 +37,12 @@ const DateScreen: React.FC<ApplicationScreenProps> = ({navigation}) => {
           </Text>
           <DatePickerCustom date={date} onChangeDate={d => setDate(d)} />
         </View>
-        <Button title={t('continue')} onPress={onSubmit} disabled={!date} />
+        <Button
+          title={t('continue')}
+          onPress={onSubmit}
+          disabled={!date}
+          style={styles.continueButton}
+        />
       </SafeAreaView>
     </View>
   );
@@ -48,6 +60,9 @@ const styles = StyleSheet.create({
     ...fonts.textRegular,
     textAlign: 'center',
     marginTop: 8,
+  },
+  continueButton: {
+    marginBottom: Platform.select({android: 24}),
   },
 });
 
