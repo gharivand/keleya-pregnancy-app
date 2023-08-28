@@ -8,7 +8,7 @@ import {fonts, images, layout} from '../theme';
 import {Button} from '../components';
 import {StoreContext} from '../context/Store';
 
-const WorkoutScreen: React.FC<ApplicationScreenProps> = () => {
+const WorkoutScreen: React.FC<ApplicationScreenProps> = ({navigation}) => {
   const {t} = useTranslation(['auth']);
   const {updateUserData} = useContext(StoreContext);
   const [items, setItems] = useState<string[]>([]);
@@ -29,6 +29,7 @@ const WorkoutScreen: React.FC<ApplicationScreenProps> = () => {
   const onSubmit = () => {
     if (updateUserData) {
       updateUserData({time_of_week: selectedTime});
+      navigation.navigate('SuccessScreen');
     }
   };
 
