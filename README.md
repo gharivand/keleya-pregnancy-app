@@ -1,4 +1,4 @@
-# Keleya Pregnancy App
+# Simple Auth App
 
 This is a React Native project aimed at providing a mini onboarding flow for the app.
 
